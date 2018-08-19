@@ -24,7 +24,7 @@
     <DotNetCliToolReference Include="Swashbuckle.AspNetCore.Cli" Version="1.2.0-beta1" />
   </ItemGroup>-->
 
-  <Target Name="SwaggerToFile" AfterTargets="AfterBuild">
+  <Target Name="SwaggerToFile" AfterTargets="AfterBuild-foo">
     <Exec Command="dotnet ..\..\..\src\Swashbuckle.AspNetCore.Cli\bin\$(Configuration)\netcoreapp2.0\dotnet-swagger.dll tofile --host http://example.com --output wwwroot\api-docs\v1\swagger.json $(OutputPath)$(AssemblyName).dll v1" />
   </Target>
 </Project>

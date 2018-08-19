@@ -103,9 +103,9 @@ namespace Swashbuckle.AspNetCore.SwaggerUI
             };
         }
 
-        private string SerializeToJson(JObject jObject)
+        private string SerializeToJson(object obj)
         {
-            return JsonConvert.SerializeObject(jObject, new JsonSerializerSettings
+            return JsonConvert.SerializeObject(obj, new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Include,
                 Formatting = Formatting.None

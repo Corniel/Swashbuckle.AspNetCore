@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace Swashbuckle.AspNetCore.SwaggerUI
 {
@@ -31,17 +32,11 @@ namespace Swashbuckle.AspNetCore.SwaggerUI
         /// <summary>
         /// Gets the JavaScript config object, represented as JSON, that will be passed to the SwaggerUI
         /// </summary>
-        public JObject ConfigObject { get; } = JObject.FromObject(new
-        {
-            urls = new object[] { },
-            validatorUrl = JValue.CreateNull()
-        });
+        public JObject ConfigObject  { get; set; }
 
         /// <summary>
         /// Gets the JavaScript config object, represented as JSON, that will be passed to the initOAuth method
         /// </summary>
-        public JObject OAuthConfigObject { get; } = JObject.FromObject(new
-        {
-        });
+        public JObject OAuthConfigObject { get; set; }
     }
 }

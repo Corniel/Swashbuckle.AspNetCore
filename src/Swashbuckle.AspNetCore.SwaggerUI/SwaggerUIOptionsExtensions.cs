@@ -42,8 +42,9 @@ namespace Microsoft.AspNetCore.Builder
         /// <param name="name">The description that appears in the document selector drop-down</param>
         public static void SwaggerEndpoint(this SwaggerUIOptions options, string url, string name)
         {
-            var urls = options.ConfigObject.Value<JArray>("urls");
-            urls.Add(JObject.FromObject(new { url = url, name = name }));
+            throw new NotImplementedException();
+            ////var urls = options.ConfigObject.Value<JArray>("urls");
+            ////urls.Add(JObject.FromObject(new { url = url, name = name }));
         }
 
         /// <summary>
